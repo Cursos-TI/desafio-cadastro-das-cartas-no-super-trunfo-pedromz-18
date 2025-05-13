@@ -3,7 +3,7 @@
 int main (){
     char estado1[20], nome1[50], codigo1[10]; //definindo as variáveis que tem caracteres e seus limites, como o nome do estado, nome da cidade e o código da carta da cidade 1
     int turistico1; //definindo em números a quantidade de pontos turísticos da cidade 1
-    float pib1, area1, populacao1; //definindo em números mais precisos a quantidade do pib, área e população da cidade 1
+    float pib1, area1, populacao1, densidade1, pibpercap1; //definindo em números mais precisos a quantidade do pib, área e população da cidade 1
 
         //função printf será utilizada para poder imprimir no terminal a pergunta
         //função scanf será utilizada para registrar a resposta do usuário sobre determinada pergunta
@@ -28,6 +28,8 @@ int main (){
 
     printf("Número de Pontos Turísticos: \n");
     scanf("%d", &turistico1);
+
+
         printf("\n");
         printf("CARTA 1 \n");
         printf("\n");
@@ -35,15 +37,22 @@ int main (){
         printf("Código da Carta: %s \n", codigo1);
         printf("Nome da Cidade: %s \n", nome1);
         printf("População: %0.0f \n", populacao1);
-        printf("Área KM²: %0.0f \n", area1);
-        printf("PIB: %0.1f \n", pib1);
-        printf("Pontos Turísticos: %d \n\n", turistico1);
+        printf("Área KM²: %.2fkm² \n", area1);
+        printf("PIB: R$%0.0f \n", pib1);
+        printf("Pontos Turísticos: %d \n", turistico1);
+            densidade1 = populacao1 / area1;
+        printf("Densidade Populacional: %.3f hab/km²\n", densidade1);
+            pibpercap1 = (float) pib1 / populacao1;
+        printf("PIB per Capita: %.2f reais \n\n", pibpercap1); 
+        
+
+        
         ("\n");
             //a função printf está sendo utilizada para imprimir todas as informações da carta 1
 
         char estado2[20], nome2[50], codigo2[10]; //definindo as variáveis que tem caracteres e seus limites, como o nome do estado, nome da cidade e o código da carta da cidade 2
         int turistico2; //definindo em números a quantidade de pontos turísticos da cidade 1
-        float pib2, area2, populacao2; //definindo em números mais precisos a quantidade do pib, área e população da cidade 1
+        float pib2, area2, populacao2, densidade2, pibpercap2; //definindo em números mais precisos a quantidade do pib, área e população da cidade 1
 
         //função printf será utilizada para poder imprimir no terminal a pergunta
         //função scanf será utilizada para registrar a resposta do usuário sobre determinada pergunta
@@ -75,9 +84,13 @@ int main (){
             printf("Código da Carta: %s \n", codigo2);
             printf("Nome da Cidade: %s \n", nome2);
             printf("População: %0.0f \n", populacao2);
-            printf("Área KM²: %0.0f \n", area2);
-            printf("PIB: %0.1f \n", pib2);
+            printf("Área KM²: %0.0fkm²\n", area2);
+            printf("PIB: R$%0.1f \n", pib2);
             printf("Pontos Turísticos: %d \n", turistico2);
+              densidade2 = populacao2 / area2;
+        printf("Densidade Populacional: %.3f hab/km²\n", densidade2);
+            pibpercap2 = (float) pib2 / populacao2;
+        printf("PIB per Capita: %.2f reais \n\n", pibpercap2); 
             printf("\n");
     
             //a função printf está sendo utilizada para imprimir todas as informações da carta 2
